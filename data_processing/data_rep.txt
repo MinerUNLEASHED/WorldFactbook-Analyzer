@@ -1,0 +1,9 @@
+BY # Of Airports
+BY Liters Of Pure Alochol
+IN sq km
+OUT OF 1000 people
+OUT OF 1000 people
+per USD
+per usd
+out of % of gdp
+by metric tons of c02

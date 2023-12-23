@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <title>Document</title> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <style>
+        #button-nav {
+            background-color: rgba(0, 0, 0, 0);
+            border: 0;
+            color: white;
+        }
+
+        #text-button-nav {
+            margin: 0px;
+        }
+        
+        div:not([class]):not([id]) {
+            width: 100%;
+            height: 100%;
+            background-color: blue;
+        }
+
+        .plot-container {
+            width: 100%;
+            height: 100%;
+        }
+        
+        /* #end {
+            background-color: blue;
+        } */
+
+        #data-graph {
+            height: 650px;
+            width: 100%;
+            margin-top: 30px;
+        }
+        /* div {
+            width: 100%;
+            height: 100%;
+        } */
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <!-- <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+                <h3>Brand</h3>
+            </a>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="navbar-header">
+            <button type="button" class="btn btn-default navbar-btn" id="button-nav"><a href="/" id="link-text-nav"><h3 id="text-button-nav">Back To Home</h3></a></button>
+            <!-- <h3 class="navbar-text navbar-left">World Factbook Data Analyzer</h3> -->
+            </div>
+        </div>
+       
+      </nav>
+
+    <div class="row" id="data-graph">
+    {% block content %}
+    {% endblock %}
+    </div>
+
+    <!-- <div class="row" id="end">
+        <p>test</p>
+    </div> -->
+      
+</body>
+</html>

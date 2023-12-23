@@ -1,0 +1,9 @@
+airports
+alcohol-consumption-per-capita
+area
+birth-rate
+death-rate
+imports
+exports
+education-expenditures
+carbon-dioxide-emissions

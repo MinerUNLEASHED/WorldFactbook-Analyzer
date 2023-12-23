@@ -1,0 +1,186 @@
+{% load custom_filters %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analyzer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script>
+        // JavaScript function to handle the scroll
+        function scrollToButtonList() {
+            // Get the offsetTop of the button-list element
+            const buttonListOffsetTop = document.querySelector('.button-list').offsetTop;
+
+            // Scroll to the button-list element
+            window.scrollTo({
+                top: buttonListOffsetTop,
+                behavior: 'smooth' // Optional: smooth scrolling animation
+            });
+        }
+    </script>
+
+    <style>
+        #first-part {
+            background-image: url('{% static "images/backimage.jpeg" %}');
+            background-size: cover;
+            height: 800px;
+        }
+
+        #first-part-left-jumbo {
+            margin-top: 100px;
+            background-color: rgba(0, 0, 255, 0);
+            color: white;
+        }
+
+        #second-part {
+            /* background-color: rgb(13, 45, 86); */
+            background: linear-gradient(to right, #3A89C2,#090D16);
+        }
+
+        #second-part-inside {
+            padding: 40px;
+            text-align: center;
+            color: white;
+            /* background-color: aqua; */
+        }
+
+        #third-part {
+            background: linear-gradient(to right, #3A89C2,#090D16);
+        }
+
+
+
+        #third-part-inside img{
+            margin-left: 120px;
+            /* text-align: center; */
+            vertical-align: middle;
+            margin-bottom: 40px;
+        }
+
+        #third-part-text {
+            text-align: center;
+            padding: 20px;
+            color: white;
+        }
+        
+        #info-button-link {
+            margin: 20px 0px;
+            background: linear-gradient(to right, #3A89C2,#090D16);
+        }
+
+        /* #button-part {
+            background: linear-gradient(to right, #3A89C2,#090D16);
+            background-color: black;
+        } */    
+
+        #button-list-inside {
+            background: linear-gradient(to right, #3A89C2,#090D16);
+            /* background-color: black; */
+        }
+
+        #button-nav {
+            background-color: rgba(0, 0, 0, 0);
+            border: 0;
+            color: white;
+        }
+
+        #text-button-nav {
+            margin: 0px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- <p class="navbar-text">Signed in as Mark Otto</p> -->
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <!-- <div class="container-fluid">
+            <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+                <h3>Brand</h3>
+            </a>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="navbar-header">
+            <!-- <button type="button" class="btn btn-default navbar-btn" id="button-nav"><h3 id="text-button-nav">World Factbook Data Analyzer</h3></button> -->
+            <button type="button" class="btn btn-default navbar-btn" id="button-nav"><a href="/" id="link-text-nav"><h3 id="text-button-nav">World Factbook Data Analyzer</h3></a></button>
+            <!-- <h3 class="navbar-text navbar-left">World Factbook Data Analyzer</h3> -->
+            </div>
+        </div>
+       
+      </nav>
+    
+    <div id="first-part">
+    <div class="container">
+        <div class="row">
+            <!-- <div class="col-md-6">
+            </div> -->
+            <div class="col-md-6">
+                <div class="jumbotron" id="first-part-left-jumbo">
+                    <h1 id="jumbo-text">Want To Understand Your World In A Better Way?</h1>
+                    <!-- <p id="jumbo-text">In this current world, it's getting increasingly difficult. Good thing we're here to take charge.</p> -->
+                    <button id="scrollButton" class="btn btn-default" onclick="scrollToButtonList()">Scroll to Graphs</button>
+                </div>
+            </div>  
+        </div>
+    </div>
+    </div>
+    
+    <div id="second-part">
+        <div id="second-part-inside">
+        <!-- <div class="container"> -->
+            <div class="row">
+                <div class="col-md-4">
+                    <img src='{% static "images/left-second-part.png" %}' alt="">
+                </div>
+                
+                <div class="col-md-4">
+                    <h2>Numbers are pretty hard to understand. That's why this website exists - to take those tricky numbers and turn them into something our brain can understand. For example, look at the images. Which one is easier to understand?</h2>
+                </div>
+
+                <div class="col-md-4">
+                    <img src='{% static "images/right-second-part.png" %}' alt="">
+                </div>
+            </div>
+        <!-- </div> -->
+        </div>
+    </div>
+
+    <div id="third-part">
+        <div id="third-part-inside">
+            <!-- <div class="container"> -->
+                <div class="row">
+                    <h1 id="third-part-text">How To Use The Graphs</h1>
+                </div>
+                <div class="row">
+                    <img src='{% static "images/plot-explainer-third-part.png" %}' alt="">
+                </div>
+            <!-- </div> -->
+        </div>
+    </div>
+
+    <div id="button-part">
+    <div class="button-list">
+    {% for data_item in data_present %}
+        <div class="col-xs-6 col-md-4" id="button-list-inside">
+            <a href="/{{data_item}}" role="button"><button type="button" class="btn btn-primary btn-lg btn-block" id="info-button-link"><h3>{{fdata_present|get_item:forloop.counter0}}</h3></button></a>
+        </div>
+    {% endfor %}
+    </div>
+    </div>
+</body>
+</html>
