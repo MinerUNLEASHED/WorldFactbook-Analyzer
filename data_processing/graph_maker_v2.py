@@ -6,9 +6,9 @@ import os
 cw_dir = os.path.dirname(os.path.abspath(__file__))
 
 parent_dir = os.path.dirname(cw_dir)
-data_dir = os.path.join(parent_dir, 'Data')
-current_data_dir = os.path.join(data_dir, 'Current Data')
-past_data_dir = os.path.join(data_dir, 'Past Data')
+# data_dir = os.path.join(parent_dir, 'Data')
+# current_data_dir = os.path.join(data_dir, 'Current Data')
+# past_data_dir = os.path.join(data_dir, 'Past Data')
 
 main_view_dir = os.path.join(parent_dir, 'main_view')
 templates_dir = os.path.join(main_view_dir, 'templates')
@@ -16,11 +16,14 @@ test_view_dir = os.path.join(templates_dir, 'test_view')
 
 country_iso_data = pd.read_csv(os.path.join(cw_dir, 'country_code_data.csv'))
 
+# (os.path.join(current_data_dir,fr'{type_of_graph.lower()}.csv'))
+# (os.path.join(past_data_dir,fr'{type_of_graph.lower()}-past.csv'))
+
 def graph_maker_function(type_of_graph):
     type_of_graph = type_of_graph.upper()
     data_set_for_graph = pd.DataFrame(columns=['ISO', 'Year', 'Country', f'{type_of_graph}'])
-    current_data_set = pd.read_csv((os.path.join(current_data_dir,fr'{type_of_graph.lower()}.csv')),usecols=[0,2])
-    past_data_set = pd.read_csv((os.path.join(past_data_dir,fr'{type_of_graph.lower()}-past.csv')), usecols=['Country','Value','Year'])
+    current_data_set = pd.read_csv(fr"https://f005.backblazeb2.com/file/World-Factbook-Analyzer/Current+Data/{type_of_graph.lower()}.csv",usecols=[0,2])
+    past_data_set = pd.read_csv(fr"https://f005.backblazeb2.com/file/World-Factbook-Analyzer/Past+Data/{type_of_graph.lower()}-past.csv", usecols=['Country','Value','Year'])
 
     for row in current_data_set.itertuples():
         current_country = row[1]
