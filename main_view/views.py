@@ -5,10 +5,13 @@ import os
 from data_processing.graph_maker_v2 import graph_maker_function, allowed_data, allowed_data_stripped
 import time
 
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
 # Create your views here.
-template_test_view_dir = os.path.dirname(os.path.abspath(__file__))
+template_test_view_dir = current_dir
 template_test_view_dir = os.path.join(template_test_view_dir, "templates")
 template_test_view_dir = os.path.join(template_test_view_dir, "test_view")
+
 
 
 
@@ -29,7 +32,7 @@ def index(request):
 
 
 def graph_gen(request, id):
-    graph_file_path = os.path.join('main_view/templates/test_view', f'{id}.html')
+    graph_file_path = os.path.join(template_test_view_dir, f'{id}.html')
 
     graph_maker_function(id)
 
