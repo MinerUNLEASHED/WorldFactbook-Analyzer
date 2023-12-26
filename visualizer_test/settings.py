@@ -28,7 +28,7 @@ DEBUG = True
 
 #Did This Appear In PythonAnywhere?
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["worldfactbookanalyzer.pythonanywhere.com"]
 
 
 # Application definition
