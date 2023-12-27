@@ -18,6 +18,8 @@ template_test_view_dir = os.path.join(template_test_view_dir, "test_view")
 def index(request):
     return render(request, os.path.join(template_test_view_dir,'homepage.html'),context={'data_present':allowed_data(),"fdata_present":allowed_data_stripped()})
 
+def citation_render(request):
+    return render(request, os.path.join(template_test_view_dir,'citations.html'),context={'data_present':allowed_data(),"fdata_present":allowed_data_stripped()})
 
 # def graph_gen(request, id):
 #     graph_file_path = os.path.join('main_view/templates/test_view', f'{id}.html')

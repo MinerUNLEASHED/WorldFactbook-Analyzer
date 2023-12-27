@@ -6,9 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Analyzer</title>
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    
     <script>
         function scrollToButtonList() {
             const buttonListOffsetTop = document.querySelector('.button-list').offsetTop;
@@ -81,7 +79,8 @@
 
         #third-part-text {
             text-align: center;
-            padding: 20px;
+            padding-top: 50px;
+            padding-bottom: 20px;
             color: white;
         }
         
@@ -120,6 +119,16 @@
             text-decoration: none;
         }
 
+        pre {
+            margin-left: 10px;
+            background-color: rgba(0,0,0,0);
+            line-height: 2;
+            color: white;
+            outline: none;
+            border: none;
+
+        }
+
 
     </style>
 </head>
@@ -139,88 +148,29 @@
             <!-- <button type="button" class="btn btn-default navbar-btn" id="button-nav"><h3 id="text-button-nav">World Factbook Data Analyzer</h3></button> -->
             <button type="button" class="btn btn-default navbar-btn" id="button-nav"><a href="/" id="link-text-nav"><h3 id="text-button-nav">World Factbook Data Analyzer</h3></a></button>
             <!-- <h3 class="navbar-text navbar-left">World Factbook Data Analyzer</h3> -->
-            
-            
-        
             </div>
-
+        
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="citations/">Citations</a></li>
+                <li><a href="/citations">Citations</a></li>
             </ul>
         
-        
         </div>
-
-        
        
       </nav>
-    
-    <div id="first-part">
-    <div class="container">
-        <div class="row">
-            <!-- <div class="col-md-6">
-            </div> -->
-            <div class="col-md-6">
-                <div class="jumbotron" id="first-part-left-jumbo">
-                    <h1 id="jumbo-text">Want To Understand Your World In A Better Way?</h1>
-                    <!-- <p id="jumbo-text">In this current world, it's getting increasingly difficult. Good thing we're here to take charge.</p> -->
-                    <button id="scrollButton" class="btn btn-default" onclick="scrollToButtonList()">Scroll to Graphs</button>
-                </div>
-            </div>  
-        </div>
-    </div>
-    </div>
-    
-    <div id="second-part">
-        <div id="second-part-inside">
-        <!-- <div class="container"> -->
-            <div class="row">
 
-                <div id="second-part-first-section">
-                    <div class="col-md-4">
-                        <img src='{% static "images/left-second-part.png" %}' alt="" class="img-responsive custom-image">
-                        <!-- <img src="" alt=""> -->
-                    </div>
-                </div>
-
-                <div id="second-part-second-section">
-                    <div class="col-md-4">
-                        <h2>Numbers are pretty hard to understand. That's why this website exists - to take those tricky numbers and turn them into something our brain can understand. For example, look at the images. Which one is easier to understand?</h2>
-                    </div>
-                </div>
-
-                <div id="second-part-third-section">
-                    <div class="col-md-4">
-                        <img src='{% static "images/right-second-part.png" %}' alt="">
-                        <!-- <img src="" alt=""> -->
-                    </div>
-                </div>
-            </div>
-        <!-- </div> -->
-        </div>
-    </div>
 
     <div id="third-part">
         <div id="third-part-inside">
             <!-- <div class="container"> -->
                 <div class="row">
-                    <h1 id="third-part-text">How To Use The Graphs</h1>
+                    <h1 id="third-part-text">References</h1>
                 </div>
                 <div class="row">
-                    <img src='{% static "images/plot-explainer-third-part.png" %}' alt="" class="img-responsive custom-image">
+                    <pre></pre><pre><i>Components</i> [Components]. (n.d.). Bootstrap. Retrieved October 3, 2023, from https://getbootstrap.com/ </pre><pre>     docs/3.3/components/ </pre> <pre><i>CSS</i> [CSS]. (n.d.). Bootstrap. Retrieved October 3, 2023, from https://getbootstrap.com/docs/3.3/css/ </pre> <pre><i>Django documentation</i> [Django documentation]. (n.d.). Django Project. Retrieved September 4, 2023, </pre><pre>     from https://docs.djangoproject.com/en/4.2/ </pre> <pre><i>JavaScript</i> [JavaScript]. (n.d.). Bootstrap. Retrieved October 3, 2023, from https://getbootstrap.com/ </pre><pre>     docs/3.3/javascript/ </pre> <pre>mongotop. (2023, July). <i>How to read a CSV file from a URL with Python?</i> [How to read a CSV file from </pre><pre>     a URL with Python?] (J.-F. Fabre, Ed.) [Question-Answer Format]. StackOverflow. Retrieved </pre><pre>     October 3, 2023, from https://stackoverflow.com/questions/16283799/ </pre><pre>     how-to-read-a-csv-file-from-a-url-with-python </pre> <pre>nikhilkumarsingh. (2020). <i>Plotting Choropleth Maps using Python</i> [Plotting Choropleth Maps using </pre><pre>     Python] (Nikhilkumarsingh, Ed.) [Step By Step Instructions]. GitHub. Retrieved October 3, 2023, </pre><pre>     from https://github.com/nikhilkumarsingh/choropleth-python-tutorial/blob/master/ </pre><pre>     ChoroplethTutorial.ipynb </pre> <pre><i>Plotly Open Source Graphing Library for Python</i> [Plotly Open Source Graphing Library for Python]. </pre><pre>     (n.d.). Plotly. Retrieved September 4, 2023, from https://plotly.com/python/ </pre> <pre><i>Python 3.11.1 documentation</i> [Python 3.11.1 documentation]. (n.d.). Python. Retrieved September 4, </pre><pre>     2023, from https://docs.python.org/release/3.11.1/ </pre> <pre><i>User Guide</i> [User Guide]. (n.d.). Pandas. Retrieved September 4, 2023, from https://pandas.pydata.org/ </pre><pre>     docs/user_guide/index.html#user-guide </pre> <pre><i>The World Factbook</i> [The World Factbook]. (2023, August 31). The World Factbook. Retrieved September </pre><pre>     4, 2023, from https://www.cia.gov/the-world-factbook/ </pre>
                 </div>
             <!-- </div> -->
         </div>
     </div>
 
-    <div id="button-part">
-    <div class="button-list">
-    {% for data_item in data_present %}
-        <div class="col-xs-6 col-md-4" id="button-list-inside">
-            <a href="graph/{{data_item}}" role="button"><button type="button" class="btn btn-primary btn-lg btn-block" id="info-button-link"><h3>{{fdata_present|get_item:forloop.counter0}}</h3></button></a>
-        </div>
-    {% endfor %}
-    </div>
-    </div>
 </body>
 </html>
