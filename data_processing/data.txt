@@ -1,9 +1,9 @@
 airports
-alcohol-consumption-per-capita
+alcohol-consumption-per-cap
 area
 birth-rate
 death-rate
 imports
 exports
 education-expenditures
-carbon-dioxide-emissions
+CO2-emissions
