@@ -25,3 +25,6 @@ urlpatterns = [
     path("citations/", citation_render, name="citation_render"),
     path('graph/<id>', graph_gen, name='graph_gen')
 ]
+
+handler404 = 'main_view.views.handling_404'
+handler500 = 'main_view.views.handling_500'

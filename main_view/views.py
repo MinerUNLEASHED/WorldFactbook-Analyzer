@@ -21,6 +21,12 @@ def index(request):
 def citation_render(request):
     return render(request, os.path.join(template_test_view_dir,'citations.html'),context={'data_present':allowed_data(),"fdata_present":allowed_data_stripped()})
 
+def handling_404(request, exception):
+    return render(request, os.path.join(template_test_view_dir, '404.html'))
+
+def handling_500(request):
+    return render(request, os.path.join(template_test_view_dir, '404.html'))
+
 # def graph_gen(request, id):
 #     graph_file_path = os.path.join('main_view/templates/test_view', f'{id}.html')
 #     if os.path.exists(graph_file_path):
