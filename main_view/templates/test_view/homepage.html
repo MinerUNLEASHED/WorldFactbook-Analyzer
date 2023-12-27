@@ -120,6 +120,12 @@
             text-decoration: none;
         }
 
+        .text-in-buttons {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
 
     </style>
 </head>
@@ -217,7 +223,7 @@
     <div class="button-list">
     {% for data_item in data_present %}
         <div class="col-xs-6 col-md-4" id="button-list-inside">
-            <a href="graph/{{data_item}}" role="button"><button type="button" class="btn btn-primary btn-lg btn-block" id="info-button-link"><h3>{{fdata_present|get_item:forloop.counter0}}</h3></button></a>
+            <a href="/graph/{{data_item}}" role="button" ><button type="button" class="btn btn-primary btn-lg btn-block" id="info-button-link"><h3 class="text-in-buttons">{{fdata_present|get_item:forloop.counter0}}</h3></button></a>
         </div>
     {% endfor %}
     </div>
