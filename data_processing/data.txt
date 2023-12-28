@@ -2,8 +2,9 @@ airports
 alcohol-consumption-per-capita
 area
 birth-rate
-death-rate
-imports
-exports
-education-expenditures
 CO2-emissions
+death-rate
+education-expenditures
+exports
+imports
+median-age
