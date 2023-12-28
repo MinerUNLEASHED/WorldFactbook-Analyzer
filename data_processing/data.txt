@@ -2,7 +2,7 @@ airports
 alcohol-consumption-per-capita
 area
 birth-rate
-CO2-emissions
+carbon-dioxide-emissions
 death-rate
 education-expenditures
 exports
