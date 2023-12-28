@@ -126,6 +126,26 @@
             text-overflow: ellipsis;
         }
 
+        #phone_on {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            #phone_off {
+                display: none;
+            }
+
+            #first_part {
+                display: none;
+            }
+
+            #phone_on {
+                display: block;
+                text-align: center;
+                padding: 20px;
+                font-size: 24px;
+            }
+        }
 
     </style>
 </head>
@@ -162,7 +182,7 @@
       </nav>
     
     <div id="first-part">
-    <div class="container">
+    <div class="container" id="phone_off">
         <div class="row">
             <!-- <div class="col-md-6">
             </div> -->
@@ -227,6 +247,10 @@
         </div>
     {% endfor %}
     </div>
+    </div>
+
+    <div class="container" id="phone_on">
+        <h1>You On Mobile</h1>
     </div>
 </body>
 </html>
