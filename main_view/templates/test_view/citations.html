@@ -24,43 +24,6 @@
 
         }
 
-
-        #first-part {
-            background-image: url('{% static "images/backimage.jpeg" %}');
-            background-size: cover;
-            height: 800px;
-        }
-
-        #first-part-left-jumbo {
-            margin-top: 100px;
-            background-color: rgba(0, 0, 255, 0);
-            color: white;
-        }
-
-        #second-part {
-            /* background-color: rgb(13, 45, 86); */
-            background: linear-gradient(to right, #3A89C2,#090D16);
-        }
-
-        /* #second-part-first-section {
-            background-image: url('{% static "images/left-second-part.png" %}');
-            background-size: 33% 33%;
-            height: 200px;
-        }
-
-        #second-part-third-section {
-            background-image: url('{% static "images/right-second-part.png" %}');
-            background-size: 33% 33%;
-            height: 200px;
-        } */
-
-        #second-part-inside {
-            padding: 40px;
-            text-align: center;
-            color: white;
-            /* background-color: aqua; */
-        }
-
         #third-part {
             background: linear-gradient(to right, #3A89C2,#090D16);
         }
@@ -129,6 +92,20 @@
 
         }
 
+        #button-nav {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            margin-left: -175px;
+        }
+
+        #citations-text-nav {
+            margin-bottom: -10px;
+            margin-top: -5px;
+            margin-right: -300px;
+            color: white;
+        }
+
+
 
     </style>
 </head>
@@ -148,15 +125,21 @@
             <!-- <button type="button" class="btn btn-default navbar-btn" id="button-nav"><h3 id="text-button-nav">World Factbook Data Analyzer</h3></button> -->
             <button type="button" class="btn btn-default navbar-btn" id="button-nav"><a href="/" id="link-text-nav"><h3 id="text-button-nav">World Factbook Data Analyzer</h3></a></button>
             <!-- <h3 class="navbar-text navbar-left">World Factbook Data Analyzer</h3> -->
-            </div>
+            
+            
         
+            </div>
+
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/citations">Citations</a></li>
+                <li><a href="/citations" id ="citations-text-nav"><h4>Citations</h4></a></li>
             </ul>
         
+        
         </div>
+
+        
        
-      </nav>
+    </nav>
 
 
     <div id="third-part">
