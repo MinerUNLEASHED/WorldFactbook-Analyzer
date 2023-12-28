@@ -128,17 +128,15 @@
 
         #phone_on {
             display: none;
+            margin-top: 100px;
+            background: linear-gradient(to right, #3A89C2,#090D16);
+            color: white;
         }
 
         @media (max-width: 767px) {
-            #phone_off {
-                display: none;
+            #phone_off #first_part #second_part #third_part{
+                display: none !important;
             }
-
-            #first_part {
-                display: none;
-            }
-
             #phone_on {
                 display: block;
                 text-align: center;
@@ -160,12 +158,13 @@
             color: white;
         }
 
+
     </style>
 </head>
 <body>
     <!-- <p class="navbar-text">Signed in as Mark Otto</p> -->
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="phone_off">
         <!-- <div class="container-fluid">
             <div class="navbar-header">
             <a class="navbar-brand" href="/">
@@ -194,6 +193,10 @@
        
     </nav>
     
+    <div class="container" id="phone_on">
+        <h1>Hey! Glad to see you want to visit the website! However, this website is best viewed on a bigger screen, like a laptop. Thanks for your support!</h1>
+    </div>
+
     <div id="first-part">
     <div class="container" id="phone_off">
         <div class="row">
@@ -262,8 +265,6 @@
     </div>
     </div>
 
-    <div class="container" id="phone_on">
-        <h1>You On Mobile</h1>
-    </div>
+    
 </body>
 </html>
