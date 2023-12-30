@@ -7,4 +7,5 @@ death-rate
 education-expenditures
 exports
 imports
+life-expectancy-at-birth
 median-age
