@@ -19,7 +19,7 @@ def index(request):
     return render(request, os.path.join(template_test_view_dir,'homepage.html'),context={'data_present':allowed_data(),"fdata_present":allowed_data_stripped()})
 
 def citation_render(request):
-    return render(request, os.path.join(template_test_view_dir,'citations.html'),context={'data_present':allowed_data(),"fdata_present":allowed_data_stripped()})
+    return render(request, os.path.join(template_test_view_dir,'citations.html'))
 
 def handling_404(request, exception):
     return render(request, os.path.join(template_test_view_dir, '404.html'))
