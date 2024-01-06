@@ -47,7 +47,7 @@ def graph_maker_function(type_of_graph):
                 current_data = pd.Series({'ISO':country_iso_data.loc[current_row, 'ISO'],
                                           'Year': 2023,
                                         'Country': current_country,
-                                        f'{type_of_graph}':float(row[2])})
+                                        f'{type_of_graph}':float(row[2].replace(',',''))})
 
 
 
@@ -132,7 +132,7 @@ def get_units():
     return lines
 
 
-# graph_maker_function("area")
+# graph_maker_function("inflation-rate-consumer-prices")
 
 
 
