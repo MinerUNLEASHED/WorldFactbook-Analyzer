@@ -44,9 +44,6 @@ def graph_gen(request, id):
 
     graph_maker_function(id)
 
-    # with open(graph_file_path, 'r', encoding='macroman') as file:
-    #     html_content = file.read()
-
     response = render(request, f"test_view/{id}.html")
 
     if os.path.exists(graph_file_path):

@@ -10,4 +10,5 @@ imports
 inflation-rate-consumer-prices
 life-expectancy-at-birth
 median-age
+real-gdp-per-capita
 unemployment-rate
