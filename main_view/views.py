@@ -44,7 +44,9 @@ def graph_gen(request, id):
 
     graph_maker_function(id)
 
-    response = render(request, f"test_view/{id}.html")
+    formatted_id = id.replace("-"," ").title() + " - World Factbook Data Analyzer"
+
+    response = render(request, f"test_view/{id}.html", context={"name_of_graph":formatted_id})
 
     if os.path.exists(graph_file_path):
         os.remove(graph_file_path)

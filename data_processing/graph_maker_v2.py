@@ -104,7 +104,7 @@ def graph_maker_function(type_of_graph):
         lines = file.readlines()
 
 
-    lines[:3] = ['{% extends "test_view/base.html" %}\n{% block content %}\n']
+    lines[:4] = ['{% extends "test_view/base.html" %}\n{% block content %}\n<title>{{name_of_graph}}</title>\n']
     lines[-2:] = ['{% endblock %}\n']
 
 
