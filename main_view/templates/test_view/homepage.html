@@ -95,6 +95,10 @@
             background-color: black;
         } */    
 
+        #button-part {
+            margin-bottom: 70px;
+        }
+
         #button-list-inside {
             background: linear-gradient(to right, #3A89C2,#090D16);
             /* background-color: black; */
@@ -133,7 +137,7 @@
             color: white;
         }
 
-        @media (max-width: 770px) {
+        @media (max-width: 800px) {
             #phone_off #first_part #second_part #third_part{
                 display: none !important;
             }
@@ -155,6 +159,30 @@
             margin-bottom: -10px;
             margin-top: -5px;
             /* margin-right: -300px; */
+            color: white;
+        }
+
+        #importance-part {
+            text-align: center;
+            background: linear-gradient(to right, #3A89C2,#090D16);
+            color: white;
+            
+        }
+        
+        .importance-part-title {
+            padding: 20px;
+        }
+
+        /* #importance-part-title {
+            padding: 20px;
+        } */
+
+        .thumbnail {
+            background-color:rgba(0, 0, 0, 0);
+            border: 0;
+        }
+
+        #importance-part-text {
             color: white;
         }
 
@@ -263,6 +291,62 @@
         </div>
     {% endfor %}
     </div>
+    </div>
+
+    <div id="importance-part">
+        <div id="importance-part-inside">
+            <div class="importance-part-title">
+                <h2 id="importance-part-title">So Why Should I Use This?</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <img src='{% static "images/importance-part-first-section-image.jpg" %}' alt="">
+                        <div class="caption">
+                            <h3 id="importance-part-text">Undestand Your Place In The World</h3>
+                            <p id="importance-part-text">Understand how your country compares and contrasts to other countries, visually.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <img src='{% static "images/importance-part-second-section-image.jpg" %}' alt="">
+                        <div class="caption">
+                            <h3 id="importance-part-text">See The Changes Over The Years</h3>
+                            <p id="importance-part-text">See how your data changes, to get a better understanding of your past, present, and predict for the future.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <img src='{% static "images/importance-part-third-section-image.jpg" %}' alt="">
+                        <div class="caption">
+                            <h3 id="importance-part-text">Realize The Bigger Picture</h3>
+                            <p id="importance-part-text">Realize global changes and shifts brought forth by data.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-3">
+                    <div class="thumbnail">
+                        <img src='{% static "images/importance-part-fourth-section-image.jpg" %}' alt="">
+                        <div class="caption">
+                            <h3 id="importance-part-text">Helpful For Everyone, Not Just Human Geographers</h3>
+                            <p id="importance-part-text">Helpful for anyone who wishes to understand their world in a better way.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+    
+            
+
+            
+            
+        </div>
     </div>
 
     
